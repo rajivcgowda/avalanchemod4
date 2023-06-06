@@ -21,9 +21,9 @@ contract Degen is ERC20, ERC20Burnable, Ownable {
 
     function redeem(uint256 amt) public{
         
-        require(balanceOf(msg.sender)>100, "Minimum of 100 tokens are required");
-        require(amt<=4 && amt!=0, "Enter a value from 1-3 since there are 3 items to redeem");
-        _burn(msg.sender, amt*100);
+        require(balanceOf(msg.sender)>20, "You need atleast 20 tokens to redeem an item");
+        require(amt<=4 && amt!=0, "Only 4 items are present :/");
+        _burn(msg.sender, amt*20);
        
     }
 
